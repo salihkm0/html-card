@@ -28,7 +28,7 @@
 
 .main-card-container .ad-card img {
   width: 17.5rem;
-  height: 23.563rem;
+  height: 22.33rem;
 }
 
 .card-container {
@@ -49,7 +49,7 @@
   flex: 0 0 auto;
   background: #ffffff;
   border-radius: 0.625rem;
-  width: 18.125rem;
+  width: 17.125rem;
   scroll-snap-align: center;
   position: relative;
 }
@@ -93,29 +93,30 @@
 }
 
 .card-headding {
-  margin-top: 0.9375rem;
+  margin-top: 0.4rem;
 }
+
+.card-body .card-headding h3 {
+    max-width: 90%;
+    font-size: 1rem;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    min-height: 3em;
+  }
+
 .card-price {
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  margin-top: 0.9375rem;
-}
-
-.card-body .card-headding h3 {
-  max-width: 90%;
-  font-size: 1rem;
-  font-weight: 600;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.5;
-  min-height: 3em;
+  margin-top: 0.2rem;
 }
 .card-body .card-price p.price {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
   padding: 0.25rem 0.25rem;
   border-radius: 0.25rem;
@@ -123,7 +124,7 @@
   color: #8c8c8c;
 }
 .card-body .card-price p.off {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
   background: #f6f6f6;
   padding: 0.25rem 0.25rem;
@@ -134,7 +135,7 @@
 .card-delivery {
   display: flex;
   align-items: center;
-  margin-top: 0.625rem;
+  margin-top: 0.325rem;
   gap: 0.625rem;
 }
 
@@ -238,7 +239,7 @@
   }
   .main-card-container .ad-card img {
     width: 13.125rem;
-    height: 22.688rem;
+    height: 21.688rem;
   }
 }
 
@@ -260,7 +261,7 @@
   }
   .card-body .card-price p.price,
   .card-body .card-price p.off {
-    font-size: 0.625rem;
+    font-size: 0.825rem;
   }
   .card-button button {
     padding: 0.5125rem 1.25rem;
@@ -279,11 +280,11 @@
   }
   .card-container .ad-card-mobile img {
     width: 11.875rem;
-    height: 18.813rem;
+    height: 17.5rem;
     display: block;
   }
   .card-body .card-delivery span p {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
   }
 }
 
@@ -302,7 +303,7 @@
   }
   .card-body .card-price p.price,
   .card-body .card-price p.off {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
   .card-button button {
     padding: 0.45rem 1.125rem;
@@ -316,6 +317,6 @@
   }
   .card-container .ad-card-mobile img {
     width: 10.3125rem;
-    height: 16.7rem;
+    height: 16.2rem;
   }
 }
