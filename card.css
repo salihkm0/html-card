@@ -1,317 +1,321 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .main-container {
-    width: 100%;
-    height: 100vh;
-    padding: 2.5rem 0.625rem;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-  }
-  
-  .main-card-container {
-    display: flex;
-    overflow-x: auto;
-    align-items: center;
-    padding: 0.625rem;
-    
-  }
-  
-  .main-card-container .ad-card {
-    position: fixed;
-    z-index: 9;
-  }
-  
-  .main-card-container .ad-card img {
-    width: 17.5rem; 
-    height: 23.563rem; 
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  padding: 2.5rem 0.625rem;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.main-card-container {
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  padding: 0.625rem;
+}
+
+.main-card-container .ad-card {
+  position: fixed;
+  z-index: 9;
+}
+
+.main-card-container .ad-card img {
+  width: 17.5rem;
+  height: 23.563rem;
+}
+
+.card-container {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  overflow-x: auto;
+  margin-left: 18.125rem;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+.card-container .ad-card-mobile img {
+  display: none;
+}
+.card-container .card {
+  flex: 0 0 auto;
+  background: #ffffff;
+  border-radius: 0.625rem;
+  width: 18.125rem;
+  scroll-snap-align: center;
+  position: relative;
+}
+
+.card .card-off {
+  position: absolute;
+  top: 0.9375rem;
+  left: 0.9375rem;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.4375rem;
+  background: #ffffff;
+  border: 1px solid #e6e6e6ab;
+}
+
+.card .card-off p {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #06b40e;
+}
+.card-container .card .card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-container .card .card-img img {
+  width: 100%;
+  height: 12.5rem;
+  object-fit: cover;
+  border-radius: 0.625rem;
+}
+
+.card-body {
+  /* padding: 0.625rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: auto;
+  position: relative;
+}
+
+.card-headding {
+  margin-top: 0.9375rem;
+}
+.card-price {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-top: 0.9375rem;
+}
+
+.card-body .card-headding h3 {
+  max-width: 90%;
+  font-size: 1rem;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  min-height: 3em;
+}
+.card-body .card-price p.price {
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.25rem 0.25rem;
+  border-radius: 0.25rem;
+  text-decoration: line-through;
+  color: #8c8c8c;
+}
+.card-body .card-price p.off {
+  font-size: 0.875rem;
+  font-weight: 700;
+  background: #f6f6f6;
+  padding: 0.25rem 0.25rem;
+  border-radius: 0.25rem;
+  color: #000000;
+}
+
+.card-delivery {
+  display: flex;
+  align-items: center;
+  margin-top: 0.625rem;
+  gap: 0.625rem;
+}
+
+.card-delivery span {
+  display: flex;
+  gap: 0.4375rem;
+  align-items: center;
+}
+.card-delivery span p {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.card-button button {
+  background: #000000;
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
+}
+
+/* Slide Buttons */
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-buttons .prev-btn,
+.slider-buttons .next-btn {
+  background-color: #8c8c8c;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 0.9375rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 10;
+}
+
+.slider-buttons .prev-btn {
+  position: absolute;
+  left: 0.625rem;
+  top: 50%;
+}
+
+.slider-buttons .next-btn {
+  position: absolute;
+  right: 0.625rem;
+  top: 50%;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 71.8125rem) {
   .card-container {
-    display: flex;
-    gap: 2.5rem; 
-    align-items: center;
-    overflow-x: auto;
-    margin-left: 18.125rem; 
-  }
-  
-  .card-container::-webkit-scrollbar {
-    display: none;
-  }
-  .card-container .ad-card-mobile img{
-    display: none;
+    gap: 1.25rem;
+    margin-left: 16.25rem;
   }
   .card-container .card {
-    flex: 0 0 auto;
-    background: #ffffff;
-    border-radius: 0.625rem;
-    width: 18.125rem; 
-    scroll-snap-align: center;
-    position: relative;
+    max-width: 15.625rem;
   }
-  
-  /* .card .card-off {
-    position: absolute;
-    top: 0.9375rem; 
-    left: 0.9375rem; 
-    border-radius: 0.25rem; 
-    padding: 0.125rem 0.4375rem; 
-    background: #ffffff;
-    border: 1px solid #e6e6e6ab;
+  .card-body h3 {
+    font-size: 0.875rem;
   }
-  
-  .card .card-off p {
-    font-size: 0.875rem; 
+  .card-body .card-details p {
+    font-size: 0.75rem;
     font-weight: 700;
-    color: #06b40e;
-  } */
-  .card-container .card .card-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    padding: 0.125rem 0.0625rem;
   }
-  
+  .main-card-container .ad-card img {
+    width: 15.625rem;
+    height: 20.2;
+  }
+}
+
+@media screen and (max-width: 54.75rem) {
+  .card-container {
+    gap: 1.25rem;
+    margin-left: 13.75rem;
+  }
+  .card-container .card {
+    max-width: 14.375rem;
+  }
+  .card-body h3 {
+    font-size: 0.875rem;
+  }
+  .card-body .card-delivery {
+    gap: 0.3125rem;
+  }
+  .card-body .card-delivery img {
+    width: auto;
+    height: 0.9375rem;
+  }
+  .card-body .card-delivery span p {
+    font-size: 0.75rem;
+  }
+  .main-card-container .ad-card img {
+    width: 13.125rem;
+    height: 22.688rem;
+  }
+}
+
+@media screen and (max-width: 40.9375rem) {
+  .card-container {
+    margin-left: 0rem;
+  }
+  .card-container .card {
+    width: 12.5rem;
+  }
   .card-container .card .card-img img {
     width: 100%;
-    height: 12.5rem; 
+    height: 9.375rem;
     object-fit: cover;
-    border-radius: 0.625rem;
+    background-position: center;
   }
-  
-  .card-body {
-    /* padding: 0.625rem; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: auto;
-    position: relative;
+  .card-body .card-headding h3 {
+    font-size: 0.75rem;
   }
-  
-  .card-headding {
-    margin-top: 0.9375rem; 
+  .card-body .card-price p.price,
+  .card-body .card-price p.off {
+    font-size: 0.625rem;
   }
-  .card-price {
-    display: flex;
-    align-items: center;
-    gap :0.625rem;
-    margin-top: 0.9375rem; 
+  .card-button button {
+    padding: 0.3125rem 1.25rem;
+    font-size: 0.75rem;
   }
 
-  .card-body .card-headding h3 {
-    max-width: 90%;
-    font-size: .8rem; 
-    font-weight: 600;
-    display: -webkit-box;
-    -webkit-box-orient: vertical; 
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.5; 
-    min-height: 3em;
-}
-  .card-body .card-price p.price {
-    font-size: 0.875rem; 
-    font-weight: 700;
-    background: #f6f6f6;
-    padding: 0.25rem 0.25rem; 
-    border-radius: 0.25rem; 
-  }
-  .card-body .card-price p.off{
-    font-size: 0.875rem; 
-    font-weight: 700;
-    background: #E2F1BD;
-    padding: 0.25rem 0.25rem; 
-    border-radius: 0.25rem; 
-    color: #5F7234;
-  }
-  
-  .card-delivery {
-    display: flex;
-    align-items: center;
-    margin-top: 0.625rem;
-    gap: 0.625rem;
-  }
-  
-  .card-delivery span {
-    font-size: 0.875rem; 
-    font-weight: 700;
-    display: flex;
-    gap: 0.4375rem; 
-    align-items: center;
-  }
-  
-  .card-button button {
-    background: #000000;
-    color: #fff;
-    padding: 0.5rem 1.25rem; 
-    border: none;
-    border-radius: 0.3125rem; 
-    cursor: pointer;
-    width: 100%;
-    margin-top: 0.625rem;
-    font-size: 0.875rem; 
-  }
-  
-  /* Slide Buttons */
-  .slider-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
   .slider-buttons .prev-btn,
   .slider-buttons .next-btn {
-    background-color: #8c8c8c;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 0.9375rem; 
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.25rem; 
-    position: relative;
-    z-index: 10;
+    padding: 0.625rem 0.8125rem;
+    font-size: 1rem;
   }
-  
-  .slider-buttons .prev-btn {
-    position: absolute;
-    left: 0.625rem;
-    top: 50%;
+  .main-card-container .ad-card img {
+    width: 11.875rem;
+    height: 18.813rem;
+    display: none;
   }
-  
+  .card-container .ad-card-mobile img {
+    width: 11.875rem;
+    height: 18.813rem;
+    display: block;
+  }
+  .card-body .card-delivery span p {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .card-container {
+    gap: 0.6rem;
+  }
+  .card-container .card {
+    width: 10rem;
+  }
+  .card-container .card .card-img img {
+    height: 8.125rem;
+  }
+  .card-body .card-headding h3 {
+    font-size: 0.625rem;
+  }
+  .card-body .card-price p.price,
+  .card-body .card-price p.off {
+    font-size: 0.5rem;
+  }
+  .card-button button {
+    padding: 0.25rem 1.125rem;
+    font-size: 0.625rem;
+  }
+
+  .slider-buttons .prev-btn,
   .slider-buttons .next-btn {
-    position: absolute;
-    right: 0.625rem;
-    top: 50%;
+    padding: 0.5rem 0.625rem;
+    font-size: 0.875rem;
   }
-  
-  /* Responsive Design */
-  
-  @media screen and (max-width: 71.8125rem) { 
-    .card-container {
-      gap: 1.25rem; 
-      margin-left: 16.25rem; 
-    }
-    .card-container .card {
-      max-width: 15.625rem; 
-    }
-    .card-body h3 {
-      font-size: 0.875rem; 
-    }
-    .card-body .card-details p {
-      font-size: 0.75rem; 
-      font-weight: 700;
-      padding: 0.125rem 0.0625rem;
-    }
-    .main-card-container .ad-card img {
-      width: 15.625rem; 
-      height: 20.20;
-    }
+  .card-container .ad-card-mobile img {
+    width: 10.3125rem;
+    height: 16.6rem;
   }
-  
-  @media screen and (max-width: 54.75rem) { 
-    .card-container {
-      gap: 1.25rem; 
-      margin-left: 13.75rem; 
-    }
-    .card-container .card {
-      max-width: 14.375rem; 
-    }
-    .card-body h3 {
-      font-size: 0.875rem; 
-    }
-    .card-body .card-delivery {
-      gap: 0.3125rem; 
-    }
-    .card-body .card-delivery img {
-      width: auto;
-      height: 0.9375rem; 
-    }
-    .card-body .card-delivery p {
-      font-size: 0.75rem; 
-    }
-    .main-card-container .ad-card img {
-      width: 13.125rem; 
-      height: 22.688rem; 
-    }
-  }
-  
-  @media screen and (max-width: 40.9375rem) { 
-    .card-container{
-        margin-left: 0rem; 
-    }
-    .card-container .card {
-      width: 12.5rem;
-      
-    }
-    .card-container .card .card-img img {
-      width: 100%;
-      height: 9.375rem;
-      object-fit: cover;
-      background-position: center;
-    }
-    .card-body .card-headding h3 {
-      font-size: 0.75rem;
-    }
-    .card-body .card-price p {
-      font-size: 0.625rem;
-    }
-    .card-button button {
-      padding: 0.3125rem 1.25rem;
-      font-size: 0.75rem; 
-    }
-  
-    .slider-buttons .prev-btn,
-    .slider-buttons .next-btn {
-      padding: 0.625rem 0.8125rem;
-      font-size: 1rem; 
-    }
-    .main-card-container .ad-card img {
-      width: 11.875rem; 
-      height: 18.813rem;
-      display: none;
-    }
-    .card-container .ad-card-mobile img {
-    width: 11.875rem; 
-      height: 18.813rem;
-      display : block;
-    }
-  }
-  
-  @media screen and (max-width: 30rem) {
-    .card-container {
-      gap: 0.625rem;
-    }
-    .card-container .card {
-      width: 10rem;
-    }
-    .card-container .card .card-img img {
-      height: 8.125rem;
-    }
-    .card-body .card-headding h3 {
-      font-size: 0.625rem;
-    }
-    .card-body .card-price p {
-      font-size: 0.5rem; 
-    }
-    .card-button button {
-      padding: 0.25rem 1.125rem;
-      font-size: 0.625rem; 
-    }
-  
-    .slider-buttons .prev-btn,
-    .slider-buttons .next-btn {
-      padding: 0.5rem 0.625rem; 
-      font-size: 0.875rem;
-    }
-    .card-container .ad-card-mobile img {
-      width: 10.3125rem;
-      height: 17.844rem;
-    }
-  }
-  
+}
