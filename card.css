@@ -263,7 +263,7 @@
     font-size: 0.625rem;
   }
   .card-button button {
-    padding: 0.3125rem 1.25rem;
+    padding: 0.5125rem 1.25rem;
     font-size: 0.75rem;
   }
 
@@ -305,7 +305,7 @@
     font-size: 0.5rem;
   }
   .card-button button {
-    padding: 0.25rem 1.125rem;
+    padding: 0.45rem 1.125rem;
     font-size: 0.625rem;
   }
 
@@ -316,6 +316,6 @@
   }
   .card-container .ad-card-mobile img {
     width: 10.3125rem;
-    height: 16.6rem;
+    height: 16.7rem;
   }
 }
