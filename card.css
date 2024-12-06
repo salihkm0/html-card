@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    /*font-size:*/
   }
   
   .main-container {
@@ -12,7 +13,6 @@
     background: #ffffff;
     display: flex;
     align-items: center;
-    
   }
   
   .main-card-container {
