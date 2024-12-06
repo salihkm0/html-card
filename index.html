@@ -124,7 +124,9 @@
               </div>
             </div>
           </div>
+
           <!-- Card 4 -->
+
           <div class="card">
             <div class="card-off">
               <p>45% off</p>
@@ -254,21 +256,17 @@
         <i class="fa-solid fa-chevron-right next-btn"></i>
       </div>
     </div>
-
     <!-- slider script -->
-
     <script>
       const cardContainer = document.querySelector(".card-container");
       const nextBtn = document.querySelector(".next-btn");
       const prevBtn = document.querySelector(".prev-btn");
-      const card = document.querySelector(".card"); // Reference to a single card
+      const card = document.querySelector(".card");
 
-      const cardWidth = card.offsetWidth + 20; // Card width + gap (adjust gap if needed)
+      const cardWidth = card.offsetWidth + 20;
 
-      // Auto-slide interval
       let autoSlideInterval = setInterval(autoSlide, 3000);
 
-      // Function to slide right
       function slideRight() {
         cardContainer.scrollBy({
           left: cardWidth,
@@ -276,7 +274,6 @@
         });
       }
 
-      // Function to slide left
       function slideLeft() {
         cardContainer.scrollBy({
           left: -cardWidth,
