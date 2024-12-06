@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    border: .5px solid #ff0000; 
   }
   
   .main-container {
@@ -12,11 +13,15 @@
     background: #ffffff;
     display: flex;
     align-items: center;
+    
   }
   
   .main-card-container {
     display: flex;
     overflow-x: auto;
+    align-items: center;
+    padding: 0.625rem;
+    
   }
   
   .main-card-container .ad-card {
@@ -25,25 +30,24 @@
   }
   
   .main-card-container .ad-card img {
-    margin-top: 0.625rem;
     width: 17.5rem; 
-    height: 20.625rem; 
+    height: 23.563rem; 
   }
   
   .card-container {
     display: flex;
     gap: 2.5rem; 
+    align-items: center;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 0.625rem;
-    padding: 0.625rem;
     margin-left: 18.125rem; 
   }
   
   .card-container::-webkit-scrollbar {
     display: none;
   }
-  
+  .card-container .ad-card-mobile img{
+    display: none;
+  }
   .card-container .card {
     flex: 0 0 auto;
     background: #ffffff;
@@ -53,7 +57,7 @@
     position: relative;
   }
   
-  .card .card-off {
+  /* .card .card-off {
     position: absolute;
     top: 0.9375rem; 
     left: 0.9375rem; 
@@ -67,8 +71,7 @@
     font-size: 0.875rem; 
     font-weight: 700;
     color: #06b40e;
-  }
-  
+  } */
   .card-container .card .card-img {
     display: flex;
     align-items: center;
@@ -85,35 +88,49 @@
   
   .card-body {
     /* padding: 0.625rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+    position: relative;
   }
   
-  .card-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .card-headding {
     margin-top: 0.9375rem; 
   }
-  
-  .card-body h3 {
-    max-width: 70%;
-    font-size: 1rem; 
+  .card-price {
+    display: flex;
+    align-items: center;
+    gap :0.625rem;
+    margin-top: 0.9375rem; 
+  }
+
+  .card-body .card-headding h3 {
+    max-width: 90%;
+    font-size: .8rem; 
     font-weight: 600;
     display: -webkit-box;
     -webkit-box-orient: vertical; 
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1.5; 
+    min-height: 3em;
 }
-
-
-
-  
-  .card-body .card-details p {
+  .card-body .card-price p.price {
     font-size: 0.875rem; 
     font-weight: 700;
     background: #f6f6f6;
     padding: 0.25rem 0.25rem; 
     border-radius: 0.25rem; 
+  }
+  .card-body .card-price p.off{
+    font-size: 0.875rem; 
+    font-weight: 700;
+    background: #E2F1BD;
+    padding: 0.25rem 0.25rem; 
+    border-radius: 0.25rem; 
+    color: #5F7234;
   }
   
   .card-delivery {
@@ -194,9 +211,8 @@
       padding: 0.125rem 0.0625rem;
     }
     .main-card-container .ad-card img {
-      margin-top: 0.625rem;
       width: 15.625rem; 
-      height: 20.25rem;
+      height: 20.20;
     }
   }
   
@@ -222,15 +238,18 @@
       font-size: 0.75rem; 
     }
     .main-card-container .ad-card img {
-      margin-top: 0.625rem;
       width: 13.125rem; 
-      height: 19.875rem; 
+      height: 22.688rem; 
     }
   }
   
   @media screen and (max-width: 40.9375rem) { 
+    .card-container{
+        margin-left: 0rem; 
+    }
     .card-container .card {
       width: 12.5rem;
+      
     }
     .card-container .card .card-img img {
       width: 100%;
@@ -238,10 +257,10 @@
       object-fit: cover;
       background-position: center;
     }
-    .card-body .card-details h3 {
+    .card-body .card-headding h3 {
       font-size: 0.75rem;
     }
-    .card-body .card-details p {
+    .card-body .card-price p {
       font-size: 0.625rem;
     }
     .card-button button {
@@ -255,16 +274,20 @@
       font-size: 1rem; 
     }
     .main-card-container .ad-card img {
-      margin-top: 0.625rem;
       width: 11.875rem; 
-      height: 15.9375rem;
+      height: 18.813rem;
+      display: none;
+    }
+    .card-container .ad-card-mobile img {
+    width: 11.875rem; 
+      height: 18.813rem;
+      display : block;
     }
   }
   
   @media screen and (max-width: 30rem) {
     .card-container {
       gap: 0.625rem;
-      margin-left: 11.125rem;
     }
     .card-container .card {
       width: 10rem;
@@ -272,10 +295,10 @@
     .card-container .card .card-img img {
       height: 8.125rem;
     }
-    .card-body .card-details h3 {
+    .card-body .card-headding h3 {
       font-size: 0.625rem;
     }
-    .card-body .card-details p {
+    .card-body .card-price p {
       font-size: 0.5rem; 
     }
     .card-button button {
@@ -288,10 +311,9 @@
       padding: 0.5rem 0.625rem; 
       font-size: 0.875rem;
     }
-    .main-card-container .ad-card img {
-      margin-top: 0.625rem;
+    .card-container .ad-card-mobile img {
       width: 10.3125rem;
-      height: 15.3125rem;
+      height: 17.844rem;
     }
   }
   
